@@ -1,8 +1,11 @@
 import * as React from 'react';
+import { Header } from '../../containers';
 
 const Home = (props) => {
     return (
-        <h2>这是首页</h2>
+        <>
+        <Header/>
+        </>
     )
 };
 
