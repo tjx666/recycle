@@ -1,0 +1,32 @@
+.search-bar {
+    height: 32px;
+    min-width: 340px;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+
+    .search-icon {
+        margin-right: 5px;
+        font-size: 28px;
+        color: gray;
+    }
+
+    input {
+        flex: 1;
+        height: 100%;
+        border: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
+
+.search-bar-focus {
+    box-shadow: 0 0 10px lightgoldenrodyellow;
+}

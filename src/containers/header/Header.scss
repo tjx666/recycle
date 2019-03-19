@@ -2,5 +2,22 @@
 
 header {
     height: 50px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: $primaryColor;
+
+    .logo-text {
+        font-family: 方正中宋;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .header-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }

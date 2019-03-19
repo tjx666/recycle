@@ -1,12 +1,9 @@
 import * as React from 'react';
-import { Header } from '../../containers';
 
-const Home = (props) => {
+export const Home = (props) => {
     return (
         <>
-        <Header/>
+        这是 home
         </>
     )
 };
-
-export default Home;
