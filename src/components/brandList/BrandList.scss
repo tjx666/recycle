@@ -1,0 +1,8 @@
+@import '../../constants/theme.scss';
+
+.brand-list {
+    width: 200px;
+    height: 500px;
+    border: 1px solid $primaryColor;
+    background-color: gray;
+}

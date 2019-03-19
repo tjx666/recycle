@@ -1,0 +1,19 @@
+.device-type-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aquamarine;
+
+    .device-type-item {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+.device-type-item {
+    margin: 0 30px;
+}
+
+.device-type-item-selected {
+    border-bottom: 2px solid black;
+}
