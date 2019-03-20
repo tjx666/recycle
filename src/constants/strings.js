@@ -7,4 +7,4 @@ export const headerStrings = {
     }
 }
 
-export const deviceTypes = ['手机', '平板', '笔记本', '摄像机'];
+export const deviceTypes = ['手机', '平板', '笔记本'];

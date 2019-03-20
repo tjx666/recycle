@@ -3,4 +3,7 @@
 ## 使用的技术栈
 
 1. react 全家桶 react + react hooks + react router4 + redux
-2. 后台使用 antd ui 库
+
+## 进度
+
+![进度截图](https://github.com/tjx666/recycle/blob/master/screenshots/progress.png?raw=true)

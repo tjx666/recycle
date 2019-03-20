@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "faker": "^4.1.0",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
