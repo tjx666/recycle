@@ -37,7 +37,7 @@ const DeviceTypeItem = (props) => {
 
     return (
         <div className={`device-type-item ${selected && 'device-type-item-selected'}`}>
-            <span onClick={handleClick}>{ text }</span>
+            <span className="device-type" onClick={handleClick}>{ text }</span>
         </div>
     );
 }

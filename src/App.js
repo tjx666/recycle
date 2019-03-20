@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route} from 'react-router-dom';
 import { Home, Login, Register } from './pages';
 import { Header } from './containers';
+import './App.scss';
 
 function App() {
   return (

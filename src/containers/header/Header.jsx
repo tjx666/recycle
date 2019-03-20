@@ -9,10 +9,10 @@ export const Header = (props) => {
   return (
     <header>
       <div className="header-left">
-        <span className="logo-text">{strings.title}</span>
+        <Link className="logo-text" to="/">{strings.title}</Link>
         <SearchBar/>
       </div>
-      <span>
+      <span className="links">
         <Link to="/login">{strings.login}</Link>
         <span>{' · ' }</span>
         <Link to="/register">{strings.register}</Link>

@@ -6,7 +6,9 @@ export const Home = (props) => {
     return (
         <main className="home">
             <DeviceTypeList/>
-            <BrandList/>
+            <div className="home-middle">
+                <BrandList/>
+            </div>
         </main>
     )
 };

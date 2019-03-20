@@ -13,11 +13,21 @@ header {
         font-family: 方正中宋;
         font-size: 25px;
         font-weight: bold;
+        text-decoration: none;
+        color: black;
     }
     
     .header-left {
+        min-width: 500px;
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    .links {
+
+        a {
+            text-decoration: none;
+        }
     }
 }

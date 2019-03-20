@@ -1,4 +1,8 @@
+@import '../../constants/theme.scss';
+
 .device-type-list {
+    width: fit-content;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,9 +15,21 @@
 }
 
 .device-type-item {
+    min-width: 66px;
     margin: 0 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+    .device-type {
+        cursor: pointer;
+    }
 }
 
 .device-type-item-selected {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $primaryColor;
+
+    .device-type {
+        color: $primaryColor;
+    }
 }
