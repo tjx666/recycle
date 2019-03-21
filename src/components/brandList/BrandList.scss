@@ -14,7 +14,7 @@
     .list-header {
         padding-top: 10px;
         padding-bottom: 5px;
-        border-bottom: 1px solid rgba(173, 216, 230, 0.281);
+        border-bottom: 1px solid $mostLightPrimaryColor;
         font-size: 18px;
         font-weight: bold;
         font-family: 宋体;
@@ -59,7 +59,11 @@
     }
 
     .brand-list-item:hover {
-        background-color: rgba(99, 143, 158, 0.438);
+        background-color: $mostLightPrimaryColor;
+    }
+
+    .brand-list-item-selected {
+        background-color: $mostLightPrimaryColor;
     }
 
     .list-footer {

@@ -6,6 +6,7 @@ import './BrandList.scss';
 export const BrandList = (props) => {
     const { brandListData, } = props;
     const [ showDownPullArrow, setShowDownPullArrow] = React.useState(true);
+    const [ selectedBrand, setSelectedBrand] = React.useState('全部');
     const listBody = React.useRef(null);
 
     React.useEffect(() => {
@@ -25,6 +26,10 @@ export const BrandList = (props) => {
         }
     }
 
+    const handleSelect = (brand) => {
+        setSelectedBrand(brand);
+    }
+
     const renderList = () => brandListData.map((itemData, index) => {
         const { brand, logoLink } = itemData;
         return (
@@ -32,6 +37,8 @@ export const BrandList = (props) => {
                 key={index}
                 brand={brand}
                 logoLink={logoLink}    
+                selected={brand === selectedBrand}
+                onSelect={handleSelect}
             />
         );
     })
@@ -52,10 +59,17 @@ BrandList.propTypes = {
 }
 
 const BrandListItem = (props) => {
-    const { logoLink, brand } = props;
+    const { logoLink, brand, selected, onSelect } = props;
+    
+    const handleClick = () => {
+        onSelect(brand);
+    }
     
     return (
-        <div className="brand-list-item">
+        <div
+            className={ `brand-list-item ${selected ? 'brand-list-item-selected' : ''}` }
+            onClick={handleClick}
+        >
             <img src={logoLink} alt={brand}/>
             <span className="brand-text">{ brand }</span>
             &nbsp;&nbsp;
@@ -67,4 +81,6 @@ const BrandListItem = (props) => {
 BrandListItem.propTypes = {
     logoLink: PropTypes.string.isRequired,
     brand: PropTypes.string.isRequired,
+    selected: PropTypes.bool.isRequired,
+    onSelect: PropTypes.func.isRequired,
 }

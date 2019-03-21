@@ -5,12 +5,12 @@ import './DeviceList.scss';
 export const DeviceList = (props) => {
     const { deviceListData } = props;
     
-    const renderDeviceList = () => deviceListData.map((device) => {
+    const renderDeviceList = () => deviceListData.map((device, index) => {
         const { imageSrc, model } = device;
 
         return (
             <DeviceListItem
-                key={model}
+                key={index}
                 imageSrc={imageSrc}
                 model={model}
             />
@@ -19,10 +19,32 @@ export const DeviceList = (props) => {
 
     return (
         <div className="device-list">
-            {renderDeviceList()}
+            <div className="device-list-body">
+                {renderDeviceList()}
+            </div>
+            
+            <ReadMore
+                text={'查看更多'}
+                disabled={false}
+            />
         </div>
     );
 };
+
+const ReadMore = (props) => {
+    const { text, disabled } = props;
+
+    return (
+        <div className={ `read-more ${ disabled ? 'read-more-disable' : ''}` } >
+            <span>{text}</span>
+        </div>
+    );
+}
+
+ReadMore.propTypes = {
+    text: PropTypes.string.isRequired,
+    disabled: PropTypes.bool.isRequired,
+}
 
 DeviceList.propTypes = {
     deviceListData: PropTypes.array.isRequired,
