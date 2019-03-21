@@ -5,11 +5,31 @@ import './BrandList.scss';
 
 export const BrandList = (props) => {
     const { brandListData, } = props;
-    const renderList = () => brandListData.map(itemData => {
+    const [ showDownPullArrow, setShowDownPullArrow] = React.useState(true);
+    const listBody = React.useRef(null);
+
+    React.useEffect(() => {
+        const { scrollHeight, clientHeight } = listBody.current;
+
+        setShowDownPullArrow( !(scrollHeight === clientHeight) );
+    }, [brandListData]);
+
+
+    const handleScroll = (event) => {
+        const { clientHeight, scrollHeight, scrollTop} = event.target;
+
+        if (scrollHeight === Math.round(clientHeight + scrollTop) && showDownPullArrow) {
+            setShowDownPullArrow(false);
+        } else if (!showDownPullArrow) {
+            setShowDownPullArrow(true);
+        }
+    }
+
+    const renderList = () => brandListData.map((itemData, index) => {
         const { brand, logoLink } = itemData;
         return (
             <BrandListItem
-                key={brand}
+                key={index}
                 brand={brand}
                 logoLink={logoLink}    
             />
@@ -19,10 +39,10 @@ export const BrandList = (props) => {
     return (
         <div className="brand-list">
             <div className="list-header">品牌</div>
-            <div className="list-body">
+            <div ref={listBody} className="list-body" onScroll={handleScroll}>
                 {renderList()}
             </div>
-            <Iconfont className="down-arrow-icon" type="Doublearrowdown"/>
+            <div className="list-footer">{ showDownPullArrow && <Iconfont className="down-arrow-icon" type="Doublearrowdown"/>}</div>
         </div>
     );
 };

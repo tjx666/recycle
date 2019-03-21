@@ -4,10 +4,12 @@ import { deviceTypes } from '../../constants/strings';
 import './DeviceTypeList.scss';
 
 export const DeviceTypeList = (props) => {
+    const { onSelectDeviceType } = props;
     const [selectedItem, setSelectedItem] = React.useState(deviceTypes[0]);
     
     const handleSelect = (text) => {
         setSelectedItem(text);
+        onSelectDeviceType(text);
     }
     
     const renderList = (deviceTypes) => deviceTypes.map(deviceType => {
@@ -28,6 +30,10 @@ export const DeviceTypeList = (props) => {
     );
 }
 
+DeviceTypeList.propTypes = {
+    onSelectDeviceType: PropTypes.func.isRequired
+}
+
 const DeviceTypeItem = (props) => {
     const { text, selected, onSelect } = props;
     
@@ -36,7 +42,7 @@ const DeviceTypeItem = (props) => {
     }
 
     return (
-        <div className={`device-type-item ${selected && 'device-type-item-selected'}`}>
+        <div className={`device-type-item ${selected ? 'device-type-item-selected' : ''}`}>
             <span className="device-type" onClick={handleClick}>{ text }</span>
         </div>
     );

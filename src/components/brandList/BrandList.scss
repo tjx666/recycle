@@ -61,9 +61,16 @@
         background-color: rgb(89, 133, 148);
     }
 
-    .down-arrow-icon {
-        font-size: 32px;
-        font-weight: bold;
-        color: rgb(89, 133, 148);
+    .list-footer {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .down-arrow-icon {
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(89, 133, 148);
+        }
     }
 }

@@ -17,7 +17,7 @@ export const Home = (props) => {
     
     return (
         <main className="home">
-            <DeviceTypeList/>
+            <DeviceTypeList onSelectDeviceType={() => {}} />
             <div className="home-middle">
                 <BrandList brandListData={brandsListData}/>
             </div>

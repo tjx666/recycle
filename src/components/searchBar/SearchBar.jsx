@@ -17,7 +17,7 @@ export const SearchBar = (props) => {
     }
     
     return (
-        <div className={`search-bar ${isFocus && 'search-bar-focus'}`} >
+        <div className={`search-bar ${isFocus ? 'search-bar-focus' : ''}`} >
             <Iconfont className="search-icon" type="search"/>
             <input type="text" onFocus={handleFocus} onBlur={handleBlur} placeholder={placeholder}/>
         </div>
