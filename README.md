@@ -3,6 +3,7 @@
 ## 使用的技术栈
 
 1. react 全家桶 react + react hooks + react router4 + redux
+2. formik 处理表单
 
 ## 进度
 
