@@ -5,10 +5,10 @@ import './Button.scss';
 
 export const Button = withRouter((props) => {
     const { type, history, href, disabled, children, onTap, } = props;
-    const buttonClasses = `ytj-button ytj-button-${type}`;
+    const buttonClasses = `ytj-button button-type-${type}`;
 
     const handleTap = () => {
-        onTap();
+        onTap && onTap();
         if (!!href && !disabled) {
             history.push(href);
         }

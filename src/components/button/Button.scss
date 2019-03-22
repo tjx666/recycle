@@ -1,25 +1,51 @@
 @import '../../constants/theme.scss';
 
 .ytj-button {
-    width: 85px;
+    width: 84px;
     height: 40px;
     margin: 0 auto;
     border: 1px solid gray;
     border-radius: 4px;
     line-height: 40px;
+    color: gray;
     font-size: 16px;
     text-align: center;
+    transition: background-color 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
 }
 
-.ytj-button-primary {
+.ytj-button:hover {
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+}
+
+.button-type-primary {
+    color: white;
     border: 1px solid $primaryColor;
     background-color: $primaryColor;
 }
 
-.ytj-button-dashed {
+.button-type-primary:hover {
+    color: white;
+    background-color: $lightPrimaryColor;
+}
+
+.button-type-dashed {
     border: 1px dashed gray;
 }
 
-.ytj-button-danger {
+.button-type-dashed:hover {
+    border: 1px dashed $primaryColor;
+    color: $primaryColor;
+}
+
+.button-type-danger {
+    background-color: rgba(212, 212, 212, 0.301);
     color: red;
+}
+
+.button-type-danger:hover {
+    border: 1px solid red;
+    color: white;
+    background-color: red;
 }
