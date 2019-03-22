@@ -1,0 +1,25 @@
+@import '../../constants/theme.scss';
+
+.ytj-button {
+    width: 85px;
+    height: 40px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 4px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ytj-button-primary {
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
+}
+
+.ytj-button-dashed {
+    border: 1px dashed gray;
+}
+
+.ytj-button-danger {
+    color: red;
+}
