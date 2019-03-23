@@ -15,7 +15,7 @@ export const Home = (props) => {
 
     const loadDeviceListData = async () => {
         const devices = await getDevicesByTypeAndBrand();
-        setDeviceListData([...devices, ...devices, ...devices, ...devices, ...devices].slice(1));
+        setDeviceListData([...devices, ...devices, ...devices, ...devices, ...devices, ...devices].slice(1));
     }
 
     React.useEffect(() => {

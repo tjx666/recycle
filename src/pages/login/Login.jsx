@@ -9,17 +9,26 @@ export const Login = (props) => {
     const initialValues = { email: '', password: '' };
 
     const validator = values => {
+        const { email, password, repeatPassword } = values;
         let errors = {};
-        if (!values.email) {
+        if (!email) {
             errors.email = '邮箱地址必须填写';
         } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)
         ) {
             errors.email = '无效邮箱地址';
         }
 
-        if (!values.password) {
+        if (!password) {
             errors.password = '密码必须填写';
+        }
+
+        if (!isLogin) {
+            if (!repeatPassword) {
+                errors.repeatPassword = '密码必须填写';
+            } else if (repeatPassword !== password) {
+                errors.repeatPassword = '两次密码不一致'
+            }
         }
 
         return errors;
@@ -36,7 +45,7 @@ export const Login = (props) => {
     return (
         <Card
             key={props.location.pathname}
-            className='login-card'
+            className={`login-card ${!isLogin ? 'register-card' : ''}`}
             title={<Title />}
             bordered={true}
         >
@@ -51,6 +60,12 @@ export const Login = (props) => {
                         <ErrorMessage name="email" component="label" />
                         <Field type="password" name="password" placeholder=" 密码" />
                         <ErrorMessage name="password" component="label" />
+                        {
+                            !isLogin && <>
+                                <Field type="password" name="repeatPassword" placeholder=" 重复一遍密码" />
+                                <ErrorMessage name="repeatPassword" component="label" />
+                            </>
+                        }
                         <Button className="submit-button" disabled={isSubmitting} type="primary">Submit</Button>
                     </Form>
                 )}

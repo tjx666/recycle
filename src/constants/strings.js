@@ -8,3 +8,4 @@ export const headerStrings = {
 }
 
 export const deviceTypes = ['手机', '平板', '笔记本'];
+

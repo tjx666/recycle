@@ -21,6 +21,10 @@
     color: $primaryColor;
 }
 
+.ytj-button:focus {
+    outline: none;
+}
+
 .button-type-primary {
     color: white;
     border: 1px solid $primaryColor;
@@ -52,6 +56,7 @@
     background-color: red;
 }
 
+
 .button-size-small {
     height: 30px;
 }
@@ -69,7 +74,7 @@
 
 .button-disabled:hover {
     border: 1px solid transparent;
-    color:white;
+    color: white;
     background-color: $disabledColor;
 }
 

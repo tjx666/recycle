@@ -11,7 +11,7 @@
     }
 
     .login-form {
-        height: 180px;
+        height: 200px;
         padding: 20px 0;
         display: flex;
         flex-direction: column;
@@ -38,3 +38,8 @@
     }
 }
 
+.register-card {
+    .login-form {
+        height: 240px;
+    }
+}
