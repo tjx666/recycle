@@ -11,12 +11,17 @@ export const Login = (props) => {
     const validator = values => {
         let errors = {};
         if (!values.email) {
-            errors.email = 'Required';
+            errors.email = '邮箱地址必须填写';
         } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
-            errors.email = 'Invalid email address';
+            errors.email = '无效邮箱地址';
         }
+
+        if (!values.password) {
+            errors.password = '密码必须填写';
+        }
+
         return errors;
     }
 
@@ -30,6 +35,7 @@ export const Login = (props) => {
     const Title = () => <div className="login-card-header">{isLogin ? '登入' : '注册'}</div>;
     return (
         <Card
+            key={props.location.pathname}
             className='login-card'
             title={<Title />}
             bordered={true}
@@ -45,7 +51,7 @@ export const Login = (props) => {
                         <ErrorMessage name="email" component="label" />
                         <Field type="password" name="password" placeholder=" 密码" />
                         <ErrorMessage name="password" component="label" />
-                        <Button disabled={isSubmitting} type="danger">Submit</Button>
+                        <Button className="submit-button" disabled={isSubmitting} type="primary">Submit</Button>
                     </Form>
                 )}
             </Formik>

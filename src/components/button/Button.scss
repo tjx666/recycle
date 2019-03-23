@@ -1,17 +1,19 @@
 @import '../../constants/theme.scss';
 
 .ytj-button {
-    width: 84px;
-    height: 40px;
+    height: 32px;
     margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
     border: 1px solid gray;
     border-radius: 4px;
-    line-height: 40px;
     color: gray;
     font-size: 16px;
     text-align: center;
     transition: background-color 0.4s ease-in-out;
-    transition: color 0.4s ease-in-out;
+    transition: color 0.2s linear;
+    cursor: pointer;
 }
 
 .ytj-button:hover {
@@ -48,4 +50,43 @@
     border: 1px solid red;
     color: white;
     background-color: red;
+}
+
+.button-size-small {
+    height: 30px;
+}
+
+.button-size-large {
+    height: 40px;
+}
+
+
+.button-disabled {
+    border: 1px solid transparent;
+    color: white;
+    background-color: $disabledColor;
+}
+
+.button-disabled:hover {
+    border: 1px solid transparent;
+    color:white;
+    background-color: $disabledColor;
+}
+
+.button-shape-round {
+    border-radius: 40px;
+}
+
+.button-shape-circle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.button-block {
+    width: 100%;
 }

@@ -9,6 +9,7 @@
     .card-header {
         height: 46px;
         border-bottom: 1px solid $primaryColor;
+        box-sizing: border-box;
         text-align: center;
         line-height: 46px;
     }
