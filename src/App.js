@@ -7,7 +7,7 @@ import './App.scss';
 function App() {
   return (
       <>
-        <Header/>
+        <Header isLogin={true} />
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/login" component={Login}/>

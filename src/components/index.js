@@ -6,3 +6,4 @@ export * from './deviceList/DevicesList';
 export * from './card/Card';
 export * from './button/Button';
 export * from './modal/Modal';
+export * from './navBar/NavBar';

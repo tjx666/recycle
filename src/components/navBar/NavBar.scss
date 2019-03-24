@@ -1,0 +1,34 @@
+@import '../../constants/theme.scss';
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .nav-item {
+        margin: 0 8px;
+        font-size: 24px;
+        color: black;
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+        }
+
+        &:first-child {
+            height: 32px;
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            font-size: 26px;
+            color: rgba(77, 77, 77, 0.651);
+        }
+
+        &:last-child:hover {
+            color: lightcoral;
+            cursor: pointer;
+        }
+    }
+}
