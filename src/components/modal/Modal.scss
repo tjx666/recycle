@@ -1,0 +1,48 @@
+@import '../../constants/theme.scss';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $shadowColor;
+
+    &-content {
+        min-width: 520px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    &-header {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-body {
+        flex: 1;
+        border-top: 1px solid $dividerColor;
+        border-bottom: 1px solid $dividerColor;
+    }
+
+    &-footer {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            margin: 0 10px;
+        }
+    }
+}

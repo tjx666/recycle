@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Card, Button } from '../../components';
+import { Card, Button, Modal } from '../../components';
 import './Login.scss';
 
 
@@ -66,6 +66,7 @@ export const Login = (props) => {
                                 <ErrorMessage name="repeatPassword" component="label" />
                             </>
                         }
+                        <Modal title="测试模态框" isOpen={false}></Modal>
                         <Button className="submit-button" disabled={isSubmitting} type="primary">Submit</Button>
                     </Form>
                 )}

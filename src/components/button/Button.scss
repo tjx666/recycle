@@ -2,7 +2,6 @@
 
 .ytj-button {
     height: 32px;
-    margin: 0 auto;
     padding: 0 15px;
     display: flex;
     align-items: center;
@@ -13,6 +12,7 @@
     text-align: center;
     transition: background-color 0.4s ease-in-out;
     transition: color 0.2s linear;
+    background-color: white;
     cursor: pointer;
 }
 

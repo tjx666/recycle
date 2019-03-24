@@ -4,6 +4,7 @@
 
 1. react 全家桶 react + react hooks + react router4 + redux
 2. formik 处理表单
+3. react-motion 动画库
 
 ## 本地测试
 
