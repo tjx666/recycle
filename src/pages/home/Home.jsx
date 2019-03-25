@@ -24,12 +24,12 @@ export const Home = (props) => {
     }, []);
     
     return (
-        <main className="home">
+        <div className="home">
             <DeviceTypeList onSelectDeviceType={() => {}} />
             <div className="home-middle">
                 <BrandList brandListData={brandsListData}/>
                 <DeviceList deviceListData={deviceListData}/>
             </div>
-        </main>
+        </div>
     )
 };

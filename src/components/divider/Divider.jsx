@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import './Divider.scss';
 
 export const Divider = (props) => {
-    const { className: extraClassName, style, type, dashed, orientation } = props;
+    const { className: extraClassName='', style: extraStyle={}, type, dashed, orientation } = props;
     const className = `divider ${extraClassName} divider-type-${type} ${dashed ? 'divider-dashed' : ''} divider-orientation-${orientation}`;
      
     return (
-        <div className={className} style={style}></div>
+        <div className={className} style={{...extraStyle}}></div>
     );
 }
 
@@ -21,5 +21,4 @@ Divider.defaultProps = {
     type: 'horizontal',
     dashed: false,
     orientation: 'middle',
-
 }

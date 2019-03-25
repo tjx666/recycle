@@ -9,7 +9,7 @@ export const NavBar = (props) => {
     
     return (
         <nav className="navbar">
-            <NavLink className="nav-item" to="/self"><img className="avatar" src={avatar} alt="头像加载中..."/></NavLink>
+            <NavLink className="nav-item" to="/account"><img className="avatar" src={avatar} alt="头像加载中..."/></NavLink>
             <NavLink className="nav-item" to="/deals"><Iconfont type="xiaoxi"/></NavLink>
             <NavLink className="nav-item" to="/message"><Iconfont type="gouwuche"/></NavLink>
             <Iconfont className="nav-item" type="logout"/>

@@ -5,7 +5,7 @@ import './Button.scss';
 
 export const Button = withRouter((props) => {
     const { type, history, href, size, disabled, shape, block, children, onTap, className='', style={} } = props;
-    const buttonClasses = `ytj-button button-type-${type} button-size-${size} ${disabled ? 'button-disabled' : ''}` +
+    const buttonClasses = `ytj-button  button-type-${type} button-size-${size} ${disabled ? 'button-disabled' : ''}` +
         ` button-shape-${shape} ${block ? 'button-block' : ''} ${className}`;
 
     const handleTap = () => {

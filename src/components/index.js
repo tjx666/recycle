@@ -7,3 +7,5 @@ export * from './card/Card';
 export * from './button/Button';
 export * from './modal/Modal';
 export * from './navBar/NavBar';
+export * from './divider/Divider';
+export * from './avatar/Avatar';
