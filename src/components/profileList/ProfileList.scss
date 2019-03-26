@@ -16,7 +16,7 @@
             font-weight: bold;
         }
 
-        .item-content {
+        .simple-item-content {
             display: flex;
             align-items: center;
 
@@ -39,7 +39,6 @@
         }
 
         &:hover {
-            // background-color: $mostLightPrimaryColor;
             
             .item-icon {
                 visibility: visible;

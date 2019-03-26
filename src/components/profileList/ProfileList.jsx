@@ -4,11 +4,13 @@ import { Iconfont, Divider } from '../index';
 import './ProfileList.scss';
 
 export const ProfileList = (props) => {
+    const { accountData: {name, shippingAddress} } = props;
+    
     return (
         <div className="profile-list">
-            <ProfileItem name="名称" value="余腾靖"/>
+            <ProfileItem name="名称" value={name}/>
             <Divider/>
-            <ProfileItem name="收货地址" value="江西省南昌市"/>
+            <ProfileItem name="收货地址" value={shippingAddress}/>
             <Divider/>
         </div>
     );
@@ -40,7 +42,7 @@ ProfileItem.propTypes = {
 
 const SimpleProfileItemContent = ({value}) => {
     return (
-        <div className="item-content">
+        <div className="simple-item-content">
             <span className="item-value">{value}</span> <Iconfont className="item-icon" type="edit"/> <span>修改</span>
         </div>
     )

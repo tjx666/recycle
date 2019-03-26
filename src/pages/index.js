@@ -1,4 +1,4 @@
 export * from './home/Home';
 export * from './login/Login';
-export * from './benchmark/Benchmark';
+export * from './countPrice/CountPrice';
 export * from './account/Account';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route} from 'react-router-dom';
-import { Home, Login, Benchmark, Account } from './pages';
+import { Home, Login, CountPrice, Account } from './pages';
 import { Header } from './containers';
 import './App.scss';
 
@@ -14,7 +14,7 @@ function App() {
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Login}/>
                 <Route path="/account" component={Account}/>
-                <Route path="/benchmark" component={Benchmark}/>
+                <Route path="/count_price" component={CountPrice}/>
             </Switch>
         </main>
       </>
