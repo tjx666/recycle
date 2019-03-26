@@ -1,0 +1,52 @@
+@import '../../constants/theme.scss';
+
+.profile-list {
+    width: 840px;
+    
+    .profile-item {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .item-name {
+            width: 200px;
+            display: inline-block;
+            margin-left: 100px;
+            font-weight: bold;
+        }
+
+        .item-content {
+            display: flex;
+            align-items: center;
+
+            .item-value {
+                margin-right: 10px;
+            }
+
+            .item-icon {
+                visibility: hidden;
+                font-size: 32px;
+                color: $primaryColor;
+                cursor: pointer;
+            }
+
+            .item-icon+span {
+                visibility: hidden;
+                color: $primaryColor;
+                cursor: pointer;
+            }
+        }
+
+        &:hover {
+            // background-color: $mostLightPrimaryColor;
+            
+            .item-icon {
+                visibility: visible;
+            }
+
+            .item-icon+span {
+                visibility: visible;            }
+        }
+    }
+}

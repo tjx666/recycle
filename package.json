@@ -21,7 +21,8 @@
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
-      "react/no-typos": "off"
+      "react/no-typos": "off",
+      "no-mixed-operators": "off"
     }
   },
   "browserslist": [

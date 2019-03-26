@@ -9,3 +9,4 @@ export * from './modal/Modal';
 export * from './navBar/NavBar';
 export * from './divider/Divider';
 export * from './avatar/Avatar';
+export * from './profileList/ProfileList';
