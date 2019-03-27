@@ -5,6 +5,7 @@
 1. react 全家桶 react + react hooks + react router4 + redux
 2. formik 处理表单
 3. react-motion 动画库
+4. hover.css 处理悬浮效果
 
 ## 本地测试
 

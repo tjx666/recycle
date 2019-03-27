@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 export const CountPrice = (props) => {
     return (
-        <div className="">这是手机评测页面</div>
+        <div className="count-price">
+            <h2></h2>
+        </div>
     );
-};
+}
+
+CountPrice.propTypes = {
+    type: PropTypes.oneOf(['phone', 'pad', 'notebook'])
+}

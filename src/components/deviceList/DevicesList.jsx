@@ -55,10 +55,9 @@ const DeviceListItem = (props) => {
 
     
     return (
-        <div className="model-wrapper" >
+        <div className="model-wrapper hvr-back-pulse hvr-grow-shadow" >
             <img src={imageSrc} alt={model} />
             <span>{model}</span>
-            <div className="cover"></div>
         </div>
     )
 }
