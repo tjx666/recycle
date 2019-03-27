@@ -1,27 +1,25 @@
 @import '../../constants/theme.scss';
 
 .device-list {
-    width: 860px;
-    min-width: 600px;
+    // width: 860px;
+    // min-width: 600px;
     margin-top: 10px;
     margin-left: 100px;
 
     .device-list-body {
         width: 100%;
-        height: 520px;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
-        border-bottom: 1px solid $primaryColor;
         // background-color: lightcyan;
         overflow-y: scroll;
 
         .model-wrapper {
             position: relative;
-            margin: 10px 20px;
-            padding: 0 10px;
-            padding-top: 10px;
+            margin: 8px 20px;
+            padding: 0 8px;
+            padding-top: 12px;
             padding-bottom: 8px;
             box-sizing: border-box;
             display: flex;
@@ -92,7 +90,7 @@
     animation-delay: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    background-color: rgba(32, 178, 170, 0.9 );
+    background-color: rgba(32, 178, 170, 0.9);
     color: white;
 }
 
@@ -104,9 +102,11 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
-  }
-  .model-wrapper:hover, .model-wrapper:focus, .model-wrapper:active {
+}
+
+.model-wrapper:hover,
+.model-wrapper:focus,
+.model-wrapper:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
-  }
-  
+}
