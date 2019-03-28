@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { SearchBar, NavBar } from '../../components';
+import { SearchBar, Navbar } from '../../components';
 import { Link } from 'react-router-dom';
 import { headerStrings as strings } from '../../constants/strings';
 import './Header.scss';
@@ -15,7 +15,7 @@ export const Header = (props) => {
                 <Link className="logo-text" to="/">{strings.title}</Link>
                 <SearchBar />
             </div>
-            { isLogin ? <NavBar avatar={avatar} /> : <Links/>}
+            { isLogin ? <Navbar avatar={avatar} /> : <Links/>}
         </header>
     )
 }

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Iconfont } from '../index.js'
 import './NavBar.scss';
 
-export const NavBar = (props) => {
+export const Navbar = (props) => {
     const { avatar } = props;
     
     return (
@@ -17,6 +17,6 @@ export const NavBar = (props) => {
     )
 }
 
-NavBar.propTypes = {
+Navbar.propTypes = {
     avatar: PropTypes.string,
 }

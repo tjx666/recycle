@@ -25,27 +25,28 @@
             }
 
             .item-icon {
-                visibility: hidden;
+                transition: opacity 0.2s linear;
+                opacity: 0;
                 font-size: 30px;
                 color: $primaryColor;
                 cursor: pointer;
             }
 
             .item-icon+span {
-                visibility: hidden;
+                transition: opacity 0.2s linear;
+                opacity: 0;
                 color: $primaryColor;
                 cursor: pointer;
             }
         }
 
         &:hover {
-
             .item-icon {
-                visibility: visible;
+                opacity: 1;
             }
 
             .item-icon+span {
-                visibility: visible;
+                opacity: 1;
             }
         }
     }

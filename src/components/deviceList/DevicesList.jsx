@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 import './DeviceList.scss';
 
@@ -21,9 +22,9 @@ export const DeviceList = (props) => {
     return (
         <div className="device-list">
             <Scrollbars
-                style={{ width: 860, height: 528, borderBottom: '1px solid rgb(32, 178, 170)'}}
+                style={{ width: 860, height: 528, borderBottom: '1px solid rgb(32, 178, 170)' }}
                 autoHide
-                >
+            >
                 <div className="device-list-body">
                     {renderDeviceList()}
                 </div>
@@ -61,10 +62,12 @@ const DeviceListItem = (props) => {
 
 
     return (
-        <div className="model-wrapper" >
-            <img src={imageSrc} alt={model} />
-            <span>{model}</span>
-        </div>
+        <Link to={`/count_price?device=${model}`} style={{ textDecoration: 'none', color: 'black' }}>
+            <div className="model-wrapper" >
+                <img src={imageSrc} alt={model} />
+                <span>{model}</span>
+            </div>
+        </Link>
     )
 }
 

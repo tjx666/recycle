@@ -1,0 +1,67 @@
+@import '../../constants/theme.scss';
+
+.steps-list {
+    width: 200px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    border: 1px solid $lightPrimaryColor;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &-header {
+        height: 48px;
+        padding-left: 20px;
+        text-align: left;
+        line-height: 48px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 思源黑体;
+        color: #666666;
+        background-color: $mostLightPrimaryColor;
+    }
+
+    .step-item {
+        height: 50px;
+        padding-left: 20px;
+        line-height: 50px;
+        border-bottom: 1px solid $mostLightPrimaryColor;
+        list-style: none;
+    }
+
+    .step-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Back Pulse */
+    @keyframes step-item {
+        50% {
+            background-color: rgba(62, 177, 171, 0.7);
+        }
+    }
+
+    .step-item {
+        display: inline-block;
+        vertical-align: middle;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        overflow: hidden;
+        transition-duration: 0.5s;
+        transition-property: color, background-color;
+    }
+
+    .step-item:hover,
+    .step-item:focus,
+    .step-item:active {
+        animation-name: step-item;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        background-color: rgba(62, 177, 171, 0.8);
+        color: white;
+    }
+}
