@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Avatar, Divider, ProfileList  } from '../../components';
 import { getUserInfo } from '../../api/userApi';
 import './Account.scss';

@@ -36,10 +36,20 @@ const getStepsByType = (type) => {
 }
 
 export const CountPrice = (props) => {
+    const loadStepsData = () => {
+        const steps = getStepsByType();
+        return steps.map((step, index) => {
+            return {
+                step,
+                isSelected: index % 2 === 0
+            }
+        })
+    }
+    
     return (
         <div className="count-price">
             <StepsList
-                steps={getStepsByType()}
+                stepsData={loadStepsData()}
             />
         </div>
     );

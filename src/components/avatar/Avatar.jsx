@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Avatar.scss';
 
 export const Avatar = (props) => {
-    const { className: extraClassName='', style: extraStyle={}, icon, shape, size, src, alt } = props;
+    const { className: extraClassName='', style: extraStyle={}, icon, size, src, alt } = props;
     const className = `avatar ${extraClassName} avatar-size-${size}`
 
     return (

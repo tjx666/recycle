@@ -26,10 +26,18 @@
 
     .step-item {
         height: 50px;
+        position: relative;
         padding-left: 20px;
         line-height: 50px;
         border-bottom: 1px solid $mostLightPrimaryColor;
         list-style: none;
+
+        .status-box {
+            position: absolute;
+            top: 50%;
+            left: 160px;
+            transform: translateY(-50%);
+        }
     }
 
     .step-item:last-child {
