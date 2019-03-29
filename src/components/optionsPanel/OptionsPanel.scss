@@ -1,0 +1,20 @@
+@import '../../constants/theme.scss';
+
+.options-panel {
+    min-width: 600px;
+    width: 860px;
+    margin: 50px auto;
+    background-color: rgba(127, 255, 212, 0.226);
+
+    .panel-header {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 2px solid $primaryColor;
+
+        .current-step {
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}

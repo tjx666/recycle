@@ -11,3 +11,5 @@ export * from './divider/Divider';
 export * from './avatar/Avatar';
 export * from './profileList/ProfileList';
 export * from './stepsList/StepsList';
+export * from './optionsPanel/OptionsPanel';
+export * from './prettyCheckbox/PrettyCheckbox';

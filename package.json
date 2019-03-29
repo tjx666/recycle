@@ -8,6 +8,7 @@
     "hover.css": "^2.3.2",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
+    "pretty-checkbox": "^3.0.3",
     "react": "^16.8.4",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.4",

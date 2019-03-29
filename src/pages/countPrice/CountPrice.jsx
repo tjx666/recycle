@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { StepsList } from '../../components';
+import { StepsList, OptionsPanel } from '../../components';
 import './CountPrice.scss';
 
 const getStepsByType = (type) => {
@@ -51,6 +51,11 @@ export const CountPrice = (props) => {
             <StepsList
                 stepsData={loadStepsData()}
             />
+        <OptionsPanel step="使用情况" options={[
+                '正常进入桌面',
+                '全新包装未拆封',
+                '无法开机/无法进入桌面'
+            ]}/>
         </div>
     );
 }

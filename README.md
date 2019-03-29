@@ -2,10 +2,12 @@
 
 ## 使用的技术栈
 
-1. react 全家桶 react + react hooks + react router4
-2. formik 处理表单
-3. hover.css 处理悬浮效果
-4. spinKit 处理加载动画
+1. react 全家桶 react + react hooks + react router4 + redux
+2. iconfont 阿里巴巴字体图标
+3. formik 处理表单
+4. hover.css 处理悬浮效果
+5. spinKit 处理加载动画
+6. pretty checkbox 处理勾选框
 
 ## 本地测试
 

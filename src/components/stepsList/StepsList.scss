@@ -32,6 +32,10 @@
         border-bottom: 1px solid $mostLightPrimaryColor;
         list-style: none;
 
+        &-current {
+            border-left: 2px solid lightseagreen;
+        }
+        
         .status-box {
             position: absolute;
             top: 50%;

@@ -5,7 +5,7 @@ import './StepsList.scss';
 
 
 export const StepsList = (props) => {
-    const { type, stepsData } = props;
+    const { type, stepsData, currentStep } = props;
     const wordsMap = new Map([['phone', '手机'], ['pad', '平板'], ['notebook', '笔记本']]);
 
     const renderHeader = () => {
@@ -14,11 +14,12 @@ export const StepsList = (props) => {
         )
     }
 
-    const renderItems = () => stepsData.map(({ step, isSelected }) =>
+    const renderItems = () => stepsData.map(({ step, isSelected }, index) =>
         <StepsListItem
             key={step}
             step={step}
-            isSelected={isSelected}
+            selected={isSelected}
+            isCurrentStep={currentStep === index}
         />
     )
 
@@ -33,26 +34,29 @@ export const StepsList = (props) => {
 StepsList.propTypes = {
     type: PropTypes.string,
     stepsData: PropTypes.array,
+    currentStep: PropTypes.number,
 }
 
 StepsList.defaultProps = {
     type: 'phone',
-    stepsData: []
+    stepsData: [],
+    currentStep: 0,
 }
 
 
 const StepsListItem = (props) => {
-    const { step, isSelected } = props;
+    const { step, selected, isCurrentStep } = props;
 
     return (
-        <li className="step-item">
+        <li className={`step-item ${isCurrentStep ? 'step-item-current' : ''}`}>
             <span>{step}</span>
-            <Iconfont className="status-box" type={isSelected ? 'xuanze-fangkuang' : 'fangkuang'} />
+            <Iconfont className="status-box" type={selected ? 'xuanze-fangkuang' : 'fangkuang'} />
         </li>
     )
 }
 
 StepsListItem.propTypes = {
-    step: PropTypes.string,
-    isSelected: PropTypes.bool
+    step: PropTypes.string.isRequired,
+    selected: PropTypes.bool.isRequired,
+    isCurrentStep: PropTypes.bool.isRequired,
 }
