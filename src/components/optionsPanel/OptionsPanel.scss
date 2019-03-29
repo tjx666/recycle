@@ -3,8 +3,8 @@
 .options-panel {
     min-width: 600px;
     width: 860px;
-    margin: 50px auto;
-    background-color: rgba(127, 255, 212, 0.226);
+    margin: 60px auto;
+    // background-color: rgba(127, 255, 212, 0.226);
 
     .panel-header {
         height: 50px;
@@ -15,6 +15,37 @@
             margin-left: 20px;
             font-size: 18px;
             font-weight: bold;
+        }
+    }
+
+    .option-list {
+        min-height: 360px;
+        padding: 0 20px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        
+        .option {
+            height: 40px;
+            line-height: 40px;
+            margin: 20px 40px;
+            padding: 0 18px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            list-style: none;
+            color: black;
+            transition: background-color 0.1s linear;
+
+            &:hover {
+                color: white;
+                background-color: $lightPrimaryColor;
+                cursor: pointer;
+            }
+        }
+
+        .selected {
+            color: white;
+            background-color: $primaryColor;
         }
     }
 }

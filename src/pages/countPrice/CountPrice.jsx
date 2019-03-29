@@ -51,11 +51,14 @@ export const CountPrice = (props) => {
             <StepsList
                 stepsData={loadStepsData()}
             />
-        <OptionsPanel step="使用情况" options={[
+        <OptionsPanel
+            step="使用情况"
+            optionListContent={[
                 '正常进入桌面',
                 '全新包装未拆封',
                 '无法开机/无法进入桌面'
-            ]}/>
+            ]}
+        />
         </div>
     );
 }
