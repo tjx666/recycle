@@ -42,7 +42,7 @@ const DeviceTypeItem = (props) => {
     }
 
     return (
-        <div className={`device-type-item ${selected ? 'device-type-item-selected' : ''}`}>
+        <div className={`device-type-item ${selected ? 'device-type-item-selected' : 'device-type-item-not-selected'}`}>
             <span className="device-type" onClick={handleClick}>{ type }</span>
         </div>
     );
