@@ -2,11 +2,24 @@ import React from 'react';
 import { Switch, Route} from 'react-router-dom';
 import { Home, Login, CountPrice, Account } from './pages';
 import { Header } from './containers';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 
 function App() {
   return (
       <>
+        <ToastContainer
+            className="toast"
+            autoClose={5000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnVisibilityChange
+            draggable
+            pauseOnHover
+        />
         <Header isLogin={true} />
         <main>
             <Switch>

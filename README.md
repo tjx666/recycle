@@ -8,6 +8,7 @@
 4. hover.css 处理悬浮效果
 5. spinKit 处理加载动画
 6. pretty checkbox 处理勾选框
+7. react-toastify 一个 react toast 组件
 
 ## 本地测试
 

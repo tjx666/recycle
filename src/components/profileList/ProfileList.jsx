@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-operators */
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Iconfont, Divider } from '../index';

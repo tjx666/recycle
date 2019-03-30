@@ -1,6 +1,14 @@
+@import './constants/theme.scss';
+
 #root {
-  main {
-    //   display: flex;
-    //   justify-content: center;
-  }
+}
+
+.toast {
+
+}
+
+.arrived-bottom-toast {
+    color: azure;
+    text-align: center;
+    background-color: navajowhite;
 }

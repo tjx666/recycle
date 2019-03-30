@@ -23,7 +23,7 @@ OptionsPanel.propTypes = {
 
 
 const OptionList = (props) => {
-    const { optionListContent, selected, multiple } = props;
+    const { optionListContent, multiple } = props;
     const [ selection, setSelection ] = React.useState([]);
 
     const handleSelect = (optionContent) => {

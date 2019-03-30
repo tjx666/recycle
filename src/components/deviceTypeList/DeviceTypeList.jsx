@@ -7,16 +7,16 @@ export const DeviceTypeList = (props) => {
     const { onSelectDeviceType } = props;
     const [selectedItem, setSelectedItem] = React.useState(deviceTypes[0]);
     
-    const handleSelect = (text) => {
-        setSelectedItem(text);
-        onSelectDeviceType(text);
+    const handleSelect = (type) => {
+        setSelectedItem(type);
+        onSelectDeviceType(type);
     }
     
     const renderList = (deviceTypes) => deviceTypes.map(deviceType => {
         return (
             <DeviceTypeItem
                 key={deviceType}
-                text={deviceType}
+                type={deviceType}
                 selected={deviceType === selectedItem }
                 onSelect={handleSelect}
             />
@@ -35,21 +35,21 @@ DeviceTypeList.propTypes = {
 }
 
 const DeviceTypeItem = (props) => {
-    const { text, selected, onSelect } = props;
+    const { type, selected, onSelect } = props;
     
     const handleClick = () => {
-        onSelect(text);
+        onSelect(type);
     }
 
     return (
         <div className={`device-type-item ${selected ? 'device-type-item-selected' : ''}`}>
-            <span className="device-type" onClick={handleClick}>{ text }</span>
+            <span className="device-type" onClick={handleClick}>{ type }</span>
         </div>
     );
 }
 
 DeviceTypeItem.propTypes = {
-    text: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     selected: PropTypes.bool,
     onSelect: PropTypes.func.isRequired,
 }

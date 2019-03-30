@@ -5,7 +5,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import './DeviceList.scss';
 
 export const DeviceList = (props) => {
-    const { deviceListData } = props;
+    const { deviceListData, onClickReadMore } = props;
 
     const renderDeviceList = () => deviceListData.map((device, index) => {
         const { imageSrc, model } = device;
@@ -19,6 +19,10 @@ export const DeviceList = (props) => {
         );
     })
 
+    const handleClickReadMore = () => {
+        onClickReadMore();
+    }
+
     return (
         <div className="device-list">
             <Scrollbars
@@ -30,36 +34,22 @@ export const DeviceList = (props) => {
                 </div>
             </Scrollbars>
             <ReadMore
-                text={'查看更多'}
+                desc={'查看更多'}
                 disabled={false}
+                onClickReadMore={handleClickReadMore}
             />
         </div>
-
     );
 };
 
-const ReadMore = (props) => {
-    const { text, disabled } = props;
-
-    return (
-        <div className={`read-more ${disabled ? 'read-more-disable' : ''}`} >
-            <span>{text}</span>
-        </div>
-    );
-}
-
-ReadMore.propTypes = {
-    text: PropTypes.string.isRequired,
-    disabled: PropTypes.bool.isRequired,
-}
-
 DeviceList.propTypes = {
     deviceListData: PropTypes.array.isRequired,
+    onClickReadMore: PropTypes.func.isRequired,
 }
+
 
 const DeviceListItem = (props) => {
     const { imageSrc, model } = props;
-
 
     return (
         <Link to={`/count_price?device=${model}`} style={{ textDecoration: 'none', color: 'black' }}>
@@ -74,4 +64,22 @@ const DeviceListItem = (props) => {
 DeviceListItem.propTypes = {
     imageSrc: PropTypes.string.isRequired,
     model: PropTypes.string.isRequired,
+}
+
+
+const ReadMore = (props) => {
+    const { desc, disabled, onClickReadMore } = props;
+    const handleClickReadMore = () => onClickReadMore();
+
+    return (
+        <div onClick={handleClickReadMore} className={`read-more ${disabled ? 'read-more-disable' : ''}`} >
+            <span>{desc}</span>
+        </div>
+    );
+}
+
+ReadMore.propTypes = {
+    desc: PropTypes.string.isRequired,
+    disabled: PropTypes.bool.isRequired,
+    onClickReadMore: PropTypes.func.isRequired,
 }
