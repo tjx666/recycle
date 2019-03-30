@@ -31,33 +31,36 @@
         box-shadow: 0 0 1px rgba(0, 0, 0, 0);
         position: relative;
         overflow: hidden;
+        transition: background 0.3s linear;
+
+        &:hover {
+            color: $lightPrimaryColor;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 51%;
+            right: 51%;
+            bottom: 0;
+            background: $lightPrimaryColor;
+            height: 2.8px;
+            transition-property: left, right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+    
+        &:hover:before,
+        &:focus:before,
+        &:active:before {
+            left: 0;
+            right: 0;
+        }
+    
     }
 
-    .device-type-item-not-selected:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 51%;
-        right: 51%;
-        bottom: 0;
-        background: $mostLightPrimaryColor;
-        height: 2.8px;
-        transition-property: left, right;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-    }
-
-    .device-type-item-not-selected:hover:before,
-    .device-type-item-not-selected:focus:before,
-    .device-type-item-not-selected:active:before {
-        left: 0;
-        right: 0;
-    }
-
-    .device-type-item-not-selected:hover {
-        color: $lightPrimaryColor;
-    }
-
+    
     .device-type-item-selected {
         border-bottom: 2px solid $primaryColor;
 

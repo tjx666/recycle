@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Card, Button, Modal } from '../../components';
+import { Card, Button, Modal, Spin } from '../../components';
 import './Login.scss';
-
 
 export const Login = (props) => {
     const isLogin = props.location.pathname.slice(1).trim() === 'login';
@@ -41,6 +40,23 @@ export const Login = (props) => {
         }, 400);
     }
 
+    const renderForm = ({ isSubmitting }) => (
+        <Form className="login-form">
+            <Field type="email" name="email" placeholder=" 邮箱" />
+            <ErrorMessage name="email" component="label" />
+            <Field type="password" name="password" placeholder=" 密码" />
+            <ErrorMessage name="password" component="label" />
+            {
+                !isLogin && <>
+                    <Field type="password" name="repeatPassword" placeholder=" 重复一遍密码" />
+                    <ErrorMessage name="repeatPassword" component="label" />
+                </>
+            }
+            <Modal title="测试模态框" isOpen={false}></Modal>
+            <Button className="submit-button" disabled={isSubmitting} type="primary">Submit</Button>
+        </Form>
+    )
+
     const Title = () => <div className="login-card-header">{isLogin ? '登入' : '注册'}</div>;
     return (
         <Card
@@ -49,27 +65,18 @@ export const Login = (props) => {
             title={<Title />}
             bordered={true}
         >
+            <Spin
+                type={'pacman'}
+                showSpin={false}
+                fadeIn={'half'}
+                color='lightseagreen'
+                />
             <Formik
                 initialValues={initialValues}
                 validate={validator}
                 onSubmit={handleSubmit}
             >
-                {({ isSubmitting }) => (
-                    <Form className="login-form">
-                        <Field  type="email" name="email" placeholder=" 邮箱" />
-                        <ErrorMessage name="email" component="label" />
-                        <Field type="password" name="password" placeholder=" 密码" />
-                        <ErrorMessage name="password" component="label" />
-                        {
-                            !isLogin && <>
-                                <Field type="password" name="repeatPassword" placeholder=" 重复一遍密码" />
-                                <ErrorMessage name="repeatPassword" component="label" />
-                            </>
-                        }
-                        <Modal title="测试模态框" isOpen={false}></Modal>
-                        <Button className="submit-button" disabled={isSubmitting} type="primary">Submit</Button>
-                    </Form>
-                )}
+                {renderForm}
             </Formik>
         </Card>
     );

@@ -13,3 +13,4 @@ export * from './profileList/ProfileList';
 export * from './stepsList/StepsList';
 export * from './optionsPanel/OptionsPanel';
 export * from './prettyCheckbox/PrettyCheckbox';
+export * from './spin/Spin';

@@ -6,9 +6,9 @@
 2. iconfont 阿里巴巴字体图标
 3. formik 处理表单
 4. hover.css 处理悬浮效果
-5. spinKit 处理加载动画
+5. react-spinkit loading 组件
 6. pretty checkbox 处理勾选框
-7. react-toastify 一个 react toast 组件
+7. react-toastify react toast 组件
 
 ## 本地测试
 
