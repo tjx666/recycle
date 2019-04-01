@@ -31,4 +31,16 @@
 
 ## 进度
 
-![进度截图](https://github.com/tjx666/recycle/blob/master/screenshots/progress.png?raw=true)
+项目目前还在开发中, 只完成了前台大部分页面
+
+### 首页
+
+![首页](https://github.com/tjx666/recycle/blob/master/screenshots/home.png?raw=true)
+
+##$ 估值测页面
+
+![估值测页面](https://github.com/tjx666/recycle/blob/master/screenshots/count_price.png?raw=true)
+
+### 个人中心
+
+![个人中心](https://github.com/tjx666/recycle/blob/master/screenshots/self_center.png?raw=true)

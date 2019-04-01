@@ -1,5 +1,17 @@
-.spinner {
+.spin {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
+
+    .spinner {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    &-desc {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
 }

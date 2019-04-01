@@ -20,7 +20,7 @@ function App() {
             draggable
             pauseOnHover
         />
-        <Header isLogin={false} />
+        <Header isLogin={true} />
         <main>
             <Switch>
                 <Route exact path="/" component={Home}/>
