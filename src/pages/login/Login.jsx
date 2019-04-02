@@ -67,7 +67,7 @@ export const Login = (props) => {
         >
             <Spin
                 type={'pacman'}
-                showSpin={false}
+                showSpin={true}
                 fadeIn={'half'}
                 color='lightseagreen'
                 />

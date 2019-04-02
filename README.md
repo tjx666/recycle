@@ -9,6 +9,7 @@
 5. react-spinkit loading 组件
 6. pretty checkbox 处理勾选框
 7. react-toastify react toast 组件
+8. react-custom-scrollbars react 滚动条组件
 
 ## 本地测试
 
@@ -37,10 +38,14 @@
 
 ![首页](https://github.com/tjx666/recycle/blob/master/screenshots/home.png?raw=true)
 
-##$ 估值测页面
+### 估值页面
 
 ![估值测页面](https://github.com/tjx666/recycle/blob/master/screenshots/count_price.png?raw=true)
 
 ### 个人中心
 
 ![个人中心](https://github.com/tjx666/recycle/blob/master/screenshots/self_center.png?raw=true)
+
+### 注册
+
+![注册](https://github.com/tjx666/recycle/blob/master/screenshots/login.png?raw=true)
