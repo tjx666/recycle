@@ -1,6 +1,6 @@
 export const getUserInfo = () => {
     return {
-        name: '老余',
-        shippingAddress: '南昌市 紫阳大道 xxxx大学 11栋 n527' 
+        name: '余老头',
+        shippingAddress: 'xx市 xx大道 xxxx大学 xx栋 n52x' 
     }
 }

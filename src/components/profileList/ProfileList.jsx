@@ -29,6 +29,7 @@ const ProfileItem = (props) => {
         <div className="profile-item">
             <span className="item-name">{name}</span>
             <form action="">
+                {/* 这里就是根据是否有 render 这个 props 来返回不同的内容 */}
                 {render && render(props) || <SimpleProfileItemContent value={value}/>}
             </form>
         </div>
